@@ -1,3 +1,4 @@
+import NavLink from "./NabLink"
 const Sidebar = ()=>{
   return(
    <aside className="hidden h-screen w-64 lg:flex bg-gray-600 text-white fixed flex-col   ">
@@ -9,6 +10,10 @@ const Sidebar = ()=>{
     <li className="hover:bg-gray-700 px-4 py-2 rounded w-full text-left">Setting</li>
    </ul>
   
+  <ul className="lg:hidden">
+   
+  <NavLink></NavLink>
+  </ul>
    </aside>
   )
 }

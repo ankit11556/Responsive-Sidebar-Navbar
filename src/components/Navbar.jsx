@@ -1,11 +1,12 @@
+import NavLink from "./NabLink"
 const Navbar = ()=>{
   return (
     <header className="bg-gray-600 flex  items-center  justify-around px-2 ">
-      <ul className="flex   lg:justify-start lg:pl-64 gap-4 p-2  text-white">
-        <li>Home</li>
-        <li>Contact</li>
-        <li>About</li>
+      <div className="flex  lg:pl-64 ">
+      <ul className="lg:flex gap-4 text-white hidden">
+      <NavLink ></NavLink>
       </ul>
+      </div>
       <div class="w-full max-w-sm min-w-[200px] flex flex-grow justify-center">
   <div class="relative flex items-center">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute w-5 h-5 top-2.5 left-2.5 text-slate-600">
