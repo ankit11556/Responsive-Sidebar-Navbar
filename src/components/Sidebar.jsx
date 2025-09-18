@@ -1,7 +1,9 @@
 import NavLink from "./NabLink"
-const Sidebar = ()=>{
+const Sidebar = ({isOpen})=>{
   return(
-   <aside className="hidden h-screen w-64 lg:flex bg-gray-600 text-white fixed flex-col   ">
+   <aside className={`h-screen w-64 flex  bg-gray-600 text-white fixed flex-col items-center z-50
+   ${isOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0 `}>
+
       <h2 className="text-2xl p-4">My App</h2>
       
    <ul className="mt-4 space-y-2">
@@ -11,7 +13,6 @@ const Sidebar = ()=>{
    </ul>
   
   <ul className="lg:hidden">
-   
   <NavLink></NavLink>
   </ul>
    </aside>

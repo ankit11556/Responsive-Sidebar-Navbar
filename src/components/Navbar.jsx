@@ -1,14 +1,20 @@
 import NavLink from "./NabLink"
-const Navbar = ()=>{
+const Navbar = ({clickButton})=>{
   return (
-    <header className="bg-gray-600 flex  items-center  justify-around px-2 ">
+    <header className="bg-gray-600 flex  items-center  justify-around px-2 lg:fixed  w-full ">
       <div className="flex  lg:pl-64 ">
+        <div className=" lg:hidden">
+          <button className=" text-2xl text-white"
+          onClick={clickButton}
+          > ☰</button>
+        </div>
       <ul className="lg:flex gap-4 text-white hidden">
       <NavLink ></NavLink>
       </ul>
       </div>
+
       <div class="w-full max-w-sm min-w-[200px] flex flex-grow justify-center">
-  <div class="relative flex items-center">
+     <div class="relative flex items-center">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute w-5 h-5 top-2.5 left-2.5 text-slate-600">
       <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd" />
     </svg>
